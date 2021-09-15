@@ -1,6 +1,17 @@
 <div class="container">
   <h1 class="text-center">Welcome to OpenTrivia!</h1>
+  <span>
+    Category: {{trivia.category}}
+    Difficulty: {{trivia.difficulty}}
+  </span>
+
+  <p>{{trivia.question}}</p>
+
+  <p *ngFor="let answer of trivia.incorrectAnswers">
+    <button>{{answer}}</button>
+  </p>
 </div>
+<!--
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -8,8 +19,9 @@
         <div class="card-body">
           <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
           <ul class="text-center list-inline py-3">
+
             <li class="list-inline-item">
-              <a routerLink="/trivia" routerLinkActive="active" class="btn btn-info">New trivia</a>
+              <a routerLink="/" routerLinkActive="active" class="btn btn-info">New trivia</a>
             </li>
           </ul>
         </div>
@@ -18,3 +30,4 @@
     </div>
   </div>
 </div>
+-->

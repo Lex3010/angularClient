@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TriviaService } from './trivia.service';
 import { TriviaComponent } from './trivia/trivia.component';
 
 @NgModule({
@@ -17,7 +18,7 @@ import { TriviaComponent } from './trivia/trivia.component';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [TriviaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,9 @@
-export class Trivia {
+export interface Trivia {
 
   category: string;
-  type: string;
-  difficulty: string;
-  question: string;
   correctAnswer: string;
+  difficulty: string;
   incorrectAnswers: Array<String>;
-
+  question: string;
+  type: string;
 }

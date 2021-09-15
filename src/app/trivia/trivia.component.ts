@@ -9,14 +9,14 @@ import { Trivia } from '../model/trivia';
   templateUrl: './trivia.component.html',
   styleUrls: ['./trivia.component.css']
 })
-export class TriviaComponent implements OnInit {
+export class TriviaComponent {
 
-  trivia = Trivia;
+  //trivia = Trivia;
 
   constructor(private triviaService: TriviaService) { }
 
   ngOnInit(): void {
-    this.triviaService.getTrivia;
+    //this.triviaService.getTriviaJson;
   }
 
 }
