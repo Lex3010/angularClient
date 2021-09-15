@@ -1,9 +1,9 @@
 export interface Trivia {
 
   category: string;
-  correctAnswer: string;
+  //correctAnswer: string;
   difficulty: string;
-  incorrectAnswers: Array<String>;
+  answers: Array<String>;
   question: string;
   type: string;
 }

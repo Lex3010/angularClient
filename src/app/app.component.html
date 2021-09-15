@@ -7,8 +7,8 @@
 
   <p>{{trivia.question}}</p>
 
-  <p *ngFor="let answer of trivia.incorrectAnswers">
-    <button>{{answer}}</button>
+  <p *ngFor="let answer of trivia.answers">
+    <button (click)="sendAnswer(answer)">{{answer}}</button>
   </p>
 </div>
 <!--

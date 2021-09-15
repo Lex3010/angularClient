@@ -14,6 +14,7 @@ export class TriviaService {
   }
 
   private triviaUrl = '/rest/trivia';
+  private triviaAnswerUrl = '/checkanswer';
 
   getTriviaJson() {
     return this.http.get(this.triviaUrl);
@@ -26,12 +27,13 @@ export class TriviaService {
     console.log("Let e: " + trivia);
 
     return trivia;
-    // window.alert("Aanmaken");
-    //window.alert(this.triviaUrl);
-    //console.log(jsonString);
-    // const json = JSON.parse(jsonString);
-    //let triviaInstance = plainToClass(Trivia, json);
-    // return triviaInstance;
+  }
+
+  checkAnswer(answer: String) {
+    //window.alert("Dit is in de service: " + answer);
+    const headers = { 'content-type': 'application/json' }
+    const body = JSON.stringify(answer);
+    return this.http.post(this.triviaAnswerUrl, body, { 'headers': headers, observe: 'response' });
   }
 }
 

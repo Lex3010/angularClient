@@ -21,17 +21,23 @@ export class AppComponent implements OnInit {
 
   async createTrivia() {
     this.response = await this.getTriviaJson();
-    console.log("Na uitvoeren is response: " + this.response);
+    //console.log("Na uitvoeren is response: " + this.response);
 
     this.trivia = this.triviaService.createTriviaFromJson(this.response);
 
-    console.log("Laat trivia object maar zien: " + this.trivia.incorrectAnswers);
+    //console.log("Laat trivia object maar zien: " + this.trivia.answers);
   }
 
   getTriviaJson() {
-
     return this.triviaService.getTriviaJson().toPromise();
   }
+
+  sendAnswer(answer: String) {
+    //window.alert("Dit is in component: " + answer);
+    return this.triviaService.checkAnswer(answer);
+  }
+
+
 
   ngOnInit() {
     this.createTrivia();
